@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZENVON - Official Links</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 25%, #667eea 50%, #764ba2 75%, #f093fb 100%);
+            background-size: 300% 300%;
+            animation: gradientShift 8s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        .container {
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Logo Section */
+        .logo-section {
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            background: #1a237e;
+            border-radius: 30px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 
+                0 20px 40px rgba(26, 35, 126, 0.3),
+                0 0 0 4px rgba(255, 255, 255, 0.1),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+
+        .logo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 215, 0, 0.1) 50%, transparent 70%);
+            transform: translateX(-100%);
+            transition: transform 0.6s;
+        }
+
+        .logo:hover::before {
+            transform: translateX(100%);
+        }
+
+        .logo:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 
+                0 25px 50px rgba(26, 35, 126, 0.4),
+                0 0 0 4px rgba(255, 215, 0, 0.3),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+        }
+
+        .logo-icon {
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-z {
+            font-size: 48px;
+            font-weight: 800;
+            color: #ffd700;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .logo-rays {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+        }
+
+        .ray {
+            position: absolute;
+            background: #ffd700;
+            border-radius: 2px;
+            transform-origin: center;
+        }
+
+        .ray:nth-child(1) { width: 3px; height: 15px; top: -10px; left: 50%; transform: translateX(-50%) rotate(0deg); }
+        .ray:nth-child(2) { width: 3px; height: 12px; top: -5px; right: 15px; transform: rotate(45deg); }
+        .ray:nth-child(3) { width: 15px; height: 3px; right: -10px; top: 50%; transform: translateY(-50%) rotate(90deg); }
+        .ray:nth-child(4) { width: 3px; height: 12px; bottom: -5px; right: 15px; transform: rotate(135deg); }
+        .ray:nth-child(5) { width: 3px; height: 15px; bottom: -10px; left: 50%; transform: translateX(-50%) rotate(180deg); }
+        .ray:nth-child(6) { width: 3px; height: 12px; bottom: -5px; left: 15px; transform: rotate(225deg); }
+        .ray:nth-child(7) { width: 15px; height: 3px; left: -10px; top: 50%; transform: translateY(-50%) rotate(270deg); }
+        .ray:nth-child(8) { width: 3px; height: 12px; top: -5px; left: 15px; transform: rotate(315deg); }
+
+        .brand-name {
+            font-size: 32px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Links Container */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        /* Link Button Base Style */
+        .link-btn {
+            display: flex;
+            align-items: center;
+            padding: 18px 24px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            color: #333;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.12),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .link-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.2), transparent);
+            transition: left 0.6s;
+        }
+
+        .link-btn:hover::before {
+            left: 100%;
+        }
+
+        .link-btn:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 
+                0 16px 40px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 1);
+            background: rgba(255, 255, 255, 1);
+        }
+
+        .link-btn:active {
+            transform: translateY(-2px) scale(1.01);
+        }
+
+        .link-icon {
+            width: 44px;
+            height: 44px;
+            margin-right: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            border-radius: 14px;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .link-text {
+            flex: 1;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        /* Platform Styles with Enhanced Colors */
+        .shopee .link-icon { 
+            background: linear-gradient(135deg, #ee4d2d, #ff6b47, #ff8f65);
+            color: white;
+            box-shadow: 0 6px 20px rgba(238, 77, 45, 0.4);
+        }
+        
+        .tiktok .link-icon { 
+            background: linear-gradient(135deg, #000, #333, #555);
+            color: white;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        .instagram .link-icon { 
+            background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+            color: white;
+            box-shadow: 0 6px 20px rgba(131, 58, 180, 0.4);
+        }
+        
+        .whatsapp .link-icon { 
+            background: linear-gradient(135deg, #25d366, #128c7e, #075e54);
+            color: white;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Enhanced Hover Effects */
+        .link-btn:hover .link-icon {
+            transform: scale(1.15) rotate(-5deg);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .shopee:hover .link-icon { box-shadow: 0 8px 25px rgba(238, 77, 45, 0.6); }
+        .tiktok:hover .link-icon { box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); }
+        .instagram:hover .link-icon { box-shadow: 0 8px 25px rgba(131, 58, 180, 0.6); }
+        .whatsapp:hover .link-icon { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6); }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .container {
+                max-width: 100%;
+                padding: 0 10px;
+            }
+            
+            .logo {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .logo-z {
+                font-size: 40px;
+            }
+            
+            .brand-name {
+                font-size: 28px;
+            }
+            
+            .tagline {
+                font-size: 14px;
+            }
+            
+            .link-btn {
+                padding: 16px 20px;
+                font-size: 15px;
+            }
+            
+            .link-icon {
+                width: 40px;
+                height: 40px;
+                margin-right: 16px;
+                font-size: 18px;
+            }
+        }
+
+        /* Loading Animation */
+        .logo-rays {
+            animation: rotate 10s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* Pulse effect for brand name */
+        .brand-name {
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { 
+                text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            }
+            50% { 
+                text-shadow: 0 4px 20px rgba(255, 215, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.3);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo & Brand Section -->
+        <div class="logo-section">
+            <div class="logo">
+                <div class="logo-rays">
+                    <div class="ray"></div>
+                    <div class="ray"></div>
+                    <div class="ray"></div>
+                    <div class="ray"></div>
+                    <div class="ray"></div>
+                    <div class="ray"></div>
+                    <div class="ray"></div>
+                    <div class="ray"></div>
+                </div>
+                <div class="logo-icon">
+                    <div class="logo-z">Z</div>
+                </div>
+            </div>
+            <h1 class="brand-name">ZENVON</h1>
+            <p class="tagline">Innovation Meets Excellence • Your Digital Partner</p>
+        </div>
+
+        <!-- Links Section -->
+        <div class="links">
+            <!-- Shopee -->
+            <a href="https://shopee.co.id/zenvon" target="_blank" class="link-btn shopee">
+                <div class="link-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+                <div class="link-text">Shop ZENVON di Shopee</div>
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@zenvon4?_t=ZS-8zsT2PSQtYe&_r=1" target="_blank" class="link-btn tiktok">
+                <div class="link-icon">
+                    <i class="fab fa-tiktok"></i>
+                </div>
+                <div class="link-text">Follow @zenvon di TikTok</div>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://instagram.com/zenvon" target="_blank" class="link-btn instagram">
+                <div class="link-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class="link-text">Follow @zenvon di Instagram</div>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/6283136885940" target="_blank" class="link-btn whatsapp">
+                <div class="link-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="link-text">Chat WhatsApp ZENVON</div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced click tracking
+        document.querySelectorAll('.link-btn').forEach(link => {
+            link.addEventListener('click', function() {
+                // Add ripple effect
+                const ripple = document.createElement('div');
+                ripple.style.cssText = `
+                    position: absolute;
+                    border-radius: 50%;
+                    background: rgba(255, 255, 255, 0.6);
+                    pointer-events: none;
+                    transform: scale(0);
+                    animation: ripple 0.6s linear;
+                    width: 20px;
+                    height: 20px;
+                    left: ${event.layerX - 10}px;
+                    top: ${event.layerY - 10}px;
+                `;
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+                
+                console.log('ZENVON Link clicked:', this.querySelector('.link-text').textContent);
+            });
+        });
+
+        // Add CSS for ripple animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Logo hover sound effect (optional)
+        document.querySelector('.logo').addEventListener('mouseenter', function() {
+            // Optional: Add hover sound effect here
+            console.log('ZENVON logo hovered');
+        });
+    </script>
+</body>
+</html>
